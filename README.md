@@ -1,3 +1,30 @@
+# Análisis de Algoritmos - Repositorio del Curso
+
+**Estudiante:** Diego Alejandro Quintero Cano  
+**Correo:** diegoalejandrocano@correo.itm.edu.co  
+**Institución:** Instituto Tecnológico Metropolitano (ITM)  
+
+---
+
+## Estructura del Repositorio
+
+El contenido de este repositorio está organizado en las siguientes carpetas:
+
+* **laboratorios/**: Contiene los informes evaluativos y código correspondiente a los laboratorios del curso.
+* **ejercicios-clase/**: Código y talleres desarrollados durante las sesiones prácticas.
+* **benchmarks/**: Scripts de prueba para medición de tiempos de ejecución y generación de gráficas comparativas.
+
+---
+
+## Flujo de Trabajo y Ejecución
+
+Para ejecutar los scripts de medición y pruebas, se utiliza Python 3 con las librerías de graficación:
+
+```bash
+pip install matplotlib
+python algoritmos.py
+
+
 # analisis-de-algoritmos-Labor1-Diego-Quintero
 
 # Laboratorio 1: Fundamentos de Complejidad y Recurrencias
@@ -72,3 +99,6 @@ Por lo tanto, queda demostrado que la complejidad asintótica de Merge Sort es O
 1. Reemplazo del Algoritmo: Cambiar la implementación actual de Insertion Sort por Merge Sort u otro algoritmo eficiente O(n log n).
 2. Optimización de Recursos: Cancelar la compra del servidor con doble velocidad, ya que mejorando el código el proceso terminará holgadamente dentro de las 4 horas requeridas.
 3. Mantenimiento del Código: Mantener el proyecto versionado en Git y documentado para facilitar futuras mejoras.
+
+
+
