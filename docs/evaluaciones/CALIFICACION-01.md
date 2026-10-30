@@ -68,7 +68,7 @@
 - Solo hay cuatro commits que tocan este laboratorio; se pedían al menos cinco descriptivos.
 
 ## ¿El código funciona?
-Sí. Los dos algoritmos ordenan correctamente en mis pruebas y los dos scripts corren y generan las gráficas. Pero el sentido del orden no es consistente con los escenarios.
+Sí. Los dos algoritmos ordenan correctamente y los dos scripts corren y generan las gráficas. Pero el sentido del orden no es consistente con los escenarios.
 
 ## Para el próximo laboratorio
 - Responda siempre sobre el caso del laboratorio (Tamiza) y con sus datos, no con otro caso.
