@@ -19,7 +19,7 @@
 **Lo lograron:** nada que calificar en este criterio.
 **Lo que puede mejorar:**
 - El `README.md` quedó cortado: termina en la instrucción `pip install matplotlib`. No aparecen las preguntas 3, 4 y 5 de la Parte 3 (tamaños pequeños, cuándo conviene dividir y recomendación para la gerente con la estimación a 1.000.000 de registros).
-- Como el informe es el único texto que se califica, sin esas respuestas no hay nada que evaluar.
+- Sin esas respuestas el informe no permite ver si comprendió el análisis.
 
 ## 2. Calidad de la explicación teórica (0 / 20)
 **Lo que puede mejorar:**
