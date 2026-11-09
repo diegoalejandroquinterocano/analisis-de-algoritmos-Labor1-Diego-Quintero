@@ -1,14 +1,15 @@
-# Laboratorio Evaluativo 2: Dividir y Vencer
+# Informe Evaluativo — Laboratorio 02: Dividir y Vencer (Subarreglo de Suma Máxima)
 
 **Curso:** Análisis de Algoritmos  
+**Institución:** Instituto Tecnológico Metropolitano (ITM)  
 **Estudiante:** Diego Alejandro Quintero Cano  
-**Grupo:** 8  
+**Grupo de Trabajo:** Grupo 8  
+**Ubicación del informe:** `lab2-divide-y-vencer/README.md`  
 
 ---
 
-## 1. Instrucciones para Reproducir el Experimento
+## 0. Instrucciones para Reproducir el Experimento
 
-1. **Activar el entorno e instalar dependencias:**
-   Asegúrese de tener el entorno virtual activo e instale `matplotlib` si no lo ha hecho:
+1. **Instalación de dependencias:**
    ```bash
    pip install matplotlib
