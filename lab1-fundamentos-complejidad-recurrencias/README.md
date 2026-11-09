@@ -103,3 +103,16 @@ def insertion_sort(lista: list) -> tuple[list, int]:
             j -= 1                                # Costo c11, Se ejecuta sum(i=1..n-1) i
         arr[j + 1] = clave                        # Costo c12, Se ejecuta (n - 1) veces
     return arr, comparaciones                     # Costo c13, Se ejecuta 1 vez
+
+
+
+
+
+
+
+
+
+
+
+
+    
