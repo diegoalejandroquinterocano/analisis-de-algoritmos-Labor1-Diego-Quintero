@@ -1,21 +1,19 @@
-"""Módulo de implementación de algoritmos de ordenamiento.
+"""Módulo de algoritmos de ordenamiento con conteo de comparaciones.
 
-Este módulo contiene las implementaciones de Insertion Sort y Merge Sort,
-incluyendo el conteo explícito de comparaciones para análisis de complejidad.
+Implementa Insertion Sort y Merge Sort garantizando orden ascendente (menor a mayor).
 """
 
 
-def insertion_sort(lista: list) -> tuple[list, int]:
-    """Ordena una lista de elementos utilizando el algoritmo Insertion Sort.
+def insertion_sort(datos: list[int]) -> tuple[list[int], int]:
+    """Ordena una lista de enteros en orden ascendente usando Insertion Sort.
 
     Args:
-        lista (list): Lista de elementos comparables a ordenar.
+        datos (list[int]): Lista de números enteros a ordenar.
 
     Returns:
-        tuple[list, int]: Una tupla con la lista ordenada y el número
-        total de comparaciones realizadas.
+        tuple[list[int], int]: Lista ordenada y total de comparaciones realizadas.
     """
-    arr = lista.copy()
+    arr = datos.copy()
     comparaciones = 0
     n = len(arr)
 
@@ -24,7 +22,7 @@ def insertion_sort(lista: list) -> tuple[list, int]:
         j = i - 1
         while j >= 0:
             comparaciones += 1
-            if arr[j] < clave:
+            if arr[j] <= clave:
                 break
             arr[j + 1] = arr[j]
             j -= 1
@@ -34,19 +32,18 @@ def insertion_sort(lista: list) -> tuple[list, int]:
 
 
 def _mezclar(
-    izquierda: list, derecha: list
-) -> tuple[list, int]:
-    """Función auxiliar para combinar dos subarreglos ordenados en Merge Sort.
+    izquierda: list[int], derecha: list[int]
+) -> tuple[list[int], int]:
+    """Mezcla dos listas ordenadas en orden ascendente.
 
     Args:
-        izquierda (list): Subarreglo izquierdo ya ordenado.
-        derecha (list): Subarreglo derecho ya ordenado.
+        izquierda (list[int]): Sublista izquierda ordenada.
+        derecha (list[int]): Sublista derecha ordenada.
 
     Returns:
-        tuple[list, int]: Tupla con la lista combinada ordenada y el conteo
-        de comparaciones realizadas durante la mezcla.
+        tuple[list[int], int]: Sublista unida y total de comparaciones.
     """
-    resultado = []
+    resultado: list[int] = []
     comparaciones = 0
     i = 0
     j = 0
@@ -66,24 +63,21 @@ def _mezclar(
     return resultado, comparaciones
 
 
-def merge_sort(lista: list) -> tuple[list, int]:
-    """Ordena una lista de elementos utilizando el algoritmo Merge Sort.
+def merge_sort(datos: list[int]) -> tuple[list[int], int]:
+    """Ordena una lista de enteros en orden ascendente usando Merge Sort.
 
     Args:
-        lista (list): Lista de elementos comparables a ordenar.
+        datos (list[int]): Lista de números enteros a ordenar.
 
     Returns:
-        tuple[list, int]: Una tupla con la lista ordenada y el número
-        total de comparaciones realizadas durante el proceso.
+        tuple[list[int], int]: Lista ordenada y total de comparaciones realizadas.
     """
-    if len(lista) <= 1:
-        return lista, 0
+    if len(datos) <= 1:
+        return datos.copy(), 0
 
-    medio = len(lista) // 2
-    izq_ordenada, comp_izq = merge_sort(lista[:medio])
-    der_ordenada, comp_der = merge_sort(lista[medio:])
+    medio = len(datos) // 2
+    izq, comp_izq = merge_sort(datos[:medio])
+    der, comp_der = merge_sort(datos[medio:])
 
-    mezclada, comp_mezcla = _mezclar(izq_ordenada, der_ordenada)
-    total_comparaciones = comp_izq + comp_der + comp_mezcla
-
-    return mezclada, total_comparaciones
+    mezclada, comp_mezcla = _mezclar(izq, der)
+    return mezclada, comp_izq + comp_der + comp_mezcla
