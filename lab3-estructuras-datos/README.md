@@ -10,6 +10,6 @@
 
 ## 0. Instrucciones para Reproducir el Experimento
 
-1. **Instalación de dependencias y activación:**
+1. **Instalación de dependencias:**
    ```bash
    pip install matplotlib
